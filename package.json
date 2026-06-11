@@ -7,14 +7,15 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "vite": "latest"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17",
+    "autoprefixer": "latest",
+    "gh-pages": "^6.3.0",
     "postcss": "latest",
-    "autoprefixer": "latest"
+    "tailwindcss": "^3.4.17"
   }
 }
