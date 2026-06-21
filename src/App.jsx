@@ -930,7 +930,9 @@ function AboutPage() {
             You can reach me at 010-7906-2332.
           </p>
           <a
-            href="mailto:ubaasanochir202312@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ubaasanochir202312@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-[#172033]"
           >
             <Mail size={18} />
