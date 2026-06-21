@@ -847,16 +847,17 @@ function AboutPage() {
           <UserRound size={48} />
         </div>
         <p className="mt-5 text-sm font-semibold text-[#2775ff]">Profile</p>
-        <h3 className="mt-1 text-2xl font-bold text-[#172033]">Your Name</h3>
-        <p className="mt-1 text-sm font-semibold text-slate-500">University Student & Frontend Developer</p>
+        <h3 className="mt-1 text-2xl font-bold text-[#172033]">Ulziibat Baasan Ochir</h3>
+        <p className="mt-1 text-sm font-semibold text-slate-500">Bachelor's Student</p>
         <p className="mt-4 text-sm leading-6 text-slate-600">
-          A curious student who enjoys turning everyday challenges into practical, thoughtful digital experiences.
+          A Computer Science and Engineering student building a strong foundation in software development and creating
+          practical digital experiences through hands-on projects.
         </p>
 
         <div className="mt-6 grid gap-3 border-t border-slate-200 pt-5 text-sm text-slate-600">
           <div className="flex items-center gap-3">
             <Mail size={18} className="shrink-0 text-[#2775ff]" />
-            <span className="break-all">your.email@example.com</span>
+            <span className="break-all">ubaasanochir202312@gmail.com</span>
           </div>
           <div className="flex items-center gap-3">
             <MapPin size={18} className="shrink-0 text-[#2775ff]" />
@@ -870,9 +871,10 @@ function AboutPage() {
           <p className="text-sm font-semibold text-[#2775ff]">Self Introduction</p>
           <h3 className="mt-1 text-xl font-bold text-[#172033]">Learning with purpose, building with care</h3>
           <p className="mt-4 text-sm leading-7 text-slate-600">
-            I am a university student interested in frontend development, productivity, and human-centered design. I
-            enjoy learning new technologies and applying them to real problems. My goal is to create accessible,
-            reliable products that help people stay organized and make confident decisions.
+            I am a bachelor's student at Konkuk University, majoring in Computer Science and Engineering. I am
+            developing my programming and problem-solving skills through coursework and practical projects. Student
+            Life Manager is my first web-development project and represents an important step in my journey as a
+            developer.
           </p>
         </section>
 
@@ -880,9 +882,9 @@ function AboutPage() {
           <section className="rounded-lg bg-white p-5 shadow-soft">
             <p className="text-sm font-semibold text-[#2775ff]">Education</p>
             <h3 className="mt-1 text-xl font-bold text-[#172033]">Bachelor's Degree</h3>
-            <p className="mt-3 text-sm font-semibold text-slate-700">Your University</p>
-            <p className="mt-1 text-sm text-slate-500">Computer Science or Your Major</p>
-            <p className="mt-1 text-sm text-slate-500">Expected Graduation: 2027</p>
+            <p className="mt-3 text-sm font-semibold text-slate-700">Konkuk University</p>
+            <p className="mt-1 text-sm text-slate-500">Computer Science and Engineering</p>
+            <p className="mt-1 text-sm text-slate-500">Expected Graduation: 2029</p>
           </section>
 
           <section className="rounded-lg bg-white p-5 shadow-soft">
@@ -907,9 +909,9 @@ function AboutPage() {
             <span className="w-fit rounded-lg bg-emerald-100 px-3 py-2 text-xs font-bold text-emerald-700">React Project</span>
           </div>
           <p className="mt-4 text-sm leading-7 text-slate-600">
-            A responsive productivity app that helps university students manage assignments, exams, daily tasks,
-            deadlines, and study priorities. It includes task management, filtering, calendar planning, progress
-            tracking, and persistent browser storage.
+            My first web-development project: a responsive productivity app that helps university students manage
+            assignments, exams, daily tasks, deadlines, and study priorities. It includes task management, filtering,
+            calendar planning, progress tracking, and persistent browser storage.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {["React", "Tailwind CSS", "Vite", "localStorage"].map((technology) => (
@@ -922,16 +924,17 @@ function AboutPage() {
 
         <section className="rounded-lg bg-[#172033] p-5 text-white shadow-soft">
           <p className="text-sm font-semibold text-[#f6c85f]">Contact</p>
-          <h3 className="mt-1 text-xl font-bold">Let's build something useful</h3>
+          <h3 className="mt-1 text-xl font-bold">Let's connect</h3>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
             I am open to student collaborations, internships, and opportunities to learn through meaningful projects.
+            You can reach me at 010-7906-2332.
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:ubaasanochir202312@gmail.com"
             className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-[#172033]"
           >
             <Mail size={18} />
-            Get in Touch
+            Email Me
           </a>
         </section>
       </div>
