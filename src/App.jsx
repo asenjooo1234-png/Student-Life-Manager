@@ -10,13 +10,16 @@ import {
   Dumbbell,
   GraduationCap,
   Home,
+  Mail,
+  MapPin,
   Pencil,
   Plus,
   Search,
   Settings,
   Sparkles,
   Target,
-  Trash2
+  Trash2,
+  UserRound
 } from "lucide-react";
 
 const STORAGE_KEY = "student-life-manager.tasks";
@@ -43,6 +46,7 @@ const navItems = [
   { id: "tasks", label: "Tasks", ko: "Tasks", icon: ClipboardList },
   { id: "calendar", label: "Calendar", ko: "Calendar", icon: CalendarDays },
   { id: "planner", label: "Study Planner", ko: "Study Planner", icon: Target },
+  { id: "about", label: "About Me", ko: "About Me", icon: UserRound },
   { id: "settings", label: "Settings", ko: "Settings", icon: Settings }
 ];
 
@@ -343,6 +347,8 @@ function App() {
             )}
 
             {activeView === "planner" && <PlannerPage tasks={tasks} stats={stats} />}
+
+            {activeView === "about" && <AboutPage />}
 
             {activeView === "settings" && (
               <SettingsPage tasks={tasks} clearCompleted={clearCompleted} setTasks={setTasks} />
@@ -827,6 +833,108 @@ function PlannerPage({ tasks, stats }) {
           )}
         </div>
       </section>
+    </div>
+  );
+}
+
+function AboutPage() {
+  const skills = ["React", "JavaScript", "Tailwind CSS", "Vite", "Responsive Design", "Local Storage"];
+
+  return (
+    <div className="mt-6 grid gap-5 xl:grid-cols-[340px_1fr]">
+      <aside className="rounded-lg bg-white p-5 shadow-soft">
+        <div className="grid h-24 w-24 place-items-center rounded-lg bg-[#e8f1ff] text-[#2775ff]">
+          <UserRound size={48} />
+        </div>
+        <p className="mt-5 text-sm font-semibold text-[#2775ff]">Profile</p>
+        <h3 className="mt-1 text-2xl font-bold text-[#172033]">Your Name</h3>
+        <p className="mt-1 text-sm font-semibold text-slate-500">University Student & Frontend Developer</p>
+        <p className="mt-4 text-sm leading-6 text-slate-600">
+          A curious student who enjoys turning everyday challenges into practical, thoughtful digital experiences.
+        </p>
+
+        <div className="mt-6 grid gap-3 border-t border-slate-200 pt-5 text-sm text-slate-600">
+          <div className="flex items-center gap-3">
+            <Mail size={18} className="shrink-0 text-[#2775ff]" />
+            <span className="break-all">your.email@example.com</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MapPin size={18} className="shrink-0 text-[#2775ff]" />
+            <span>Seoul, South Korea</span>
+          </div>
+        </div>
+      </aside>
+
+      <div className="grid min-w-0 gap-5">
+        <section className="rounded-lg bg-white p-5 shadow-soft">
+          <p className="text-sm font-semibold text-[#2775ff]">Self Introduction</p>
+          <h3 className="mt-1 text-xl font-bold text-[#172033]">Learning with purpose, building with care</h3>
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            I am a university student interested in frontend development, productivity, and human-centered design. I
+            enjoy learning new technologies and applying them to real problems. My goal is to create accessible,
+            reliable products that help people stay organized and make confident decisions.
+          </p>
+        </section>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          <section className="rounded-lg bg-white p-5 shadow-soft">
+            <p className="text-sm font-semibold text-[#2775ff]">Education</p>
+            <h3 className="mt-1 text-xl font-bold text-[#172033]">Bachelor's Degree</h3>
+            <p className="mt-3 text-sm font-semibold text-slate-700">Your University</p>
+            <p className="mt-1 text-sm text-slate-500">Computer Science or Your Major</p>
+            <p className="mt-1 text-sm text-slate-500">Expected Graduation: 2027</p>
+          </section>
+
+          <section className="rounded-lg bg-white p-5 shadow-soft">
+            <p className="text-sm font-semibold text-[#2775ff]">Skills</p>
+            <h3 className="mt-1 text-xl font-bold text-[#172033]">Tools & Technologies</h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span key={skill} className="rounded-lg bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-700">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <section className="rounded-lg bg-white p-5 shadow-soft">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+            <div>
+              <p className="text-sm font-semibold text-[#2775ff]">Featured Project</p>
+              <h3 className="mt-1 text-xl font-bold text-[#172033]">Student Life Manager</h3>
+            </div>
+            <span className="w-fit rounded-lg bg-emerald-100 px-3 py-2 text-xs font-bold text-emerald-700">React Project</span>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            A responsive productivity app that helps university students manage assignments, exams, daily tasks,
+            deadlines, and study priorities. It includes task management, filtering, calendar planning, progress
+            tracking, and persistent browser storage.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {["React", "Tailwind CSS", "Vite", "localStorage"].map((technology) => (
+              <span key={technology} className="rounded-lg border border-slate-200 px-3 py-2 text-xs font-bold text-slate-600">
+                {technology}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-lg bg-[#172033] p-5 text-white shadow-soft">
+          <p className="text-sm font-semibold text-[#f6c85f]">Contact</p>
+          <h3 className="mt-1 text-xl font-bold">Let's build something useful</h3>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+            I am open to student collaborations, internships, and opportunities to learn through meaningful projects.
+          </p>
+          <a
+            href="mailto:your.email@example.com"
+            className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-[#172033]"
+          >
+            <Mail size={18} />
+            Get in Touch
+          </a>
+        </section>
+      </div>
     </div>
   );
 }
